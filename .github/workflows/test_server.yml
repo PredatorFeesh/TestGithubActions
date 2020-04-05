@@ -26,6 +26,8 @@ jobs:
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
           ${{ runner.os }}-node-
+    - name: Installing npm
+      run: npm install
     - name: Run tests
       uses: stefanoeb/jest-action@1.0.2
 
